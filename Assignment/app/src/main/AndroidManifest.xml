@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.assignment">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Assignment">
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UpdateAnhTheActivity" />
+        <activity android:name=".ThemNhanVienActivity" />
+        <activity android:name=".ThongKeBaoCaoActivity"/>
+        <activity android:name=".donxinphep" />
+        <activity android:name=".tom_tat__diem_danh" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".DanhBaNhanSuActivity"/>
+        <activity android:name=".ThongTinNhanVienActivity"/>
+        <activity android:name=".PieChartActivity"/>
+        <activity android:name=".SoNhanVienDiLamActivity"/>
+        <activity android:name=".NhanVienNghiPhepActivity"/>
+        <activity android:name=".QuetQrActivity"/>
+        <activity android:name=".DuyetDonXinPhepActivity"/>
+        <activity android:name=".DonXinPhepActivity"/>
+        <activity android:name=".TinhTrangDonXinPhepActivity"/>
+        <activity android:name=".XoaNhanVienActivity"/>
+        <activity android:name=".TomTatDiemDanh"/>
+        <activity android:name=".TomTatDiemDanhHR"/>
+        <activity android:name=".TomTatDiemDanhMoiNgay"/>
+        <activity android:name=".TinhTrangDonXinPhepHRActivity"/>
+        <activity android:name=".ThongBaoActivity"
+            android:theme="@style/Theme.Assignment.NoActionBar"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <activity android:name=".ImagePickerActivity" />
+
+        <!-- uCrop cropping activity -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- cache directory file provider paths -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.assignment.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

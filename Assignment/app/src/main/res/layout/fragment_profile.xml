@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment"
+    android:paddingBottom="50dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/background_gradient"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/head"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            tools:ignore="MissingConstraints">
+            <RelativeLayout
+                android:id="@+id/linear_img_profile_fragment"
+                android:layout_width="@dimen/toolbar_profile_width"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/img_profile_fragment"
+                    android:layout_width="@dimen/toolbar_profile_width"
+                    android:layout_height="@dimen/toolbar_profile_width"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_account_circle_black_48"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="2dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/logout"
+            app:layout_constraintEnd_toEndOf="@+id/head"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!--    <ScrollView-->
+        <!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/head">-->
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_manhanvien_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_manhanvien_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Mã nhân viên"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView_manhanvien_tudong_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:text="Loading..."
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_matkhaunhanvien_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_matkhaunhanvien_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Mật khẩu"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editText_matkhaunhanvien_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_tennhanvien_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_tennhanvien_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Tên nhân viên"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editText_tennhanvien_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_email_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_email_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Email"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editText_email_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_sdt_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_sdt_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="SĐT"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editText_sdt_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_phongban_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView__phongban_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Phòng ban"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView__phongban_profile2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:text="Loading..."
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_chucvu_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_chucvu_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Chức vụ"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editText_chucvu_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_luu_profile"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_coners"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="LƯU CHỈNH SỬA"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!--    </ScrollView>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
